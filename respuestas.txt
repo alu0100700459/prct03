@@ -87,3 +87,32 @@
    - Se borran todas las 'b', 'c' y 'd' del array, aunque estén repetidas:
      ["a", "a"].
 
+41 - Crea un array de 8 enteros de valor '0'.
+
+42
+   - Se añade el 1 al array: [1].
+   - Se añaden el 2 y el 3: [1, 2, 3].
+   - Se añade el array [4, 5, 6] como último elemento: [1, 2, 3, [4, 5, 6]].
+   - Se añaden el 7 y el 8 al final: [1, 2, 3, [4, 5, 6], 7, 8].
+
+43
+   - Se hace la unión entre los dos conjuntos no introduciendo duplicados:
+     [1, 2, 3, 4, 5].
+   - Hace lo mismo que el anterior, pero introduce los elementos de b
+     primero: [5, 4, 3, 2, 1].
+   - Se crea un array con los elementos comunes no repetidos entre a y b:
+     [2, 3, 4].
+   - Hace lo mismo que el anterior, pero introduce los elementos de b
+     primero: [4, 3, 2].
+
+44
+   - El método "to_a()" de la clase "Range" convierte el rango en un array
+     con todos los elementos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+   - Hace lo mismo que lo anterior, pero el rango está definido de tal forma
+     que no se incluye el límite superior del rango en el conjunto:
+     [1, 2, 3, 4, 5, 6, 7, 8, 9].
+   - 
+   - 
+   - 
+
+
