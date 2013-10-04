@@ -1,0 +1,42 @@
+18 - La salida es el resultado de interpretar la línea introducida.
+
+21 - '\t\n' se interpreta literalmente, mostrando \t\n por pantalla
+     mientras que "\t\n" interpreta los caracteres de escape haciendo
+     que se muestre una tabulación seguida de un final de línea.
+
+22 - %q[<texto>] hace que se interprete todo su contenido como un
+     texto literal, sin necesidad de escapar comillas simples, dobles,
+     caracteres de escape, etc.
+
+23 - %Q[<texto>] hace lo mismo que %q[<texto], pero cuando se
+     encuentra con caracteres de escape '\', no vuelve a introducir
+     un caracter de escape más, haciendo que en su salida éstos se
+     puedan interpretar.
+
+24 - "--4--\n--2--\n".
+
+25 - "--\#{a}--\n--\#{b}--\n".
+
+26
+   - "he".
+   - "o".
+   - "hello".
+
+27 - "hello world".
+
+28 - "...".
+
+29 - "222".
+
+30 - Introduce cada palabra separada por espacios en un array.
+     ["this", "is", "a", "test"]
+
+31 - En el array que crea, los símbolos de escape se escapan de tal forma que
+     no se interpreta el comando al que se extienden.
+     ["\\t", "\\n"]
+
+32 - El array no escapa los caracteres de escape, por lo que los símbolos
+     se interpretan como tabulación y retorno de carro, no como '\t' y '\n'.
+     ["\t", "\n"]
+
+
