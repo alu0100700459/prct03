@@ -8,7 +8,7 @@
      texto literal, sin necesidad de escapar comillas simples, dobles,
      caracteres de escape, etc.
 
-23 - %Q[<texto>] hace lo mismo que %q[<texto], pero cuando se
+23 - %Q[<texto>] hace lo mismo que %q[<texto>], pero cuando se
      encuentra con caracteres de escape '\', no vuelve a introducir
      un caracter de escape más, haciendo que en su salida éstos se
      puedan interpretar.
@@ -111,8 +111,57 @@
    - Hace lo mismo que lo anterior, pero el rango está definido de tal forma
      que no se incluye el límite superior del rango en el conjunto:
      [1, 2, 3, 4, 5, 6, 7, 8, 9].
-   - 
-   - 
-   - 
+   - Devuelve 'false' porque el 10 no forma parte del rango.
+   - Devuelve 'true' porque el 8 forma parte del rango.
+   - Indica los números que ocupan posiciones pares en el rango, además de que
+     especifica de qué rango se trata: 1 3 5 7 9 => 1...10.
+   - NoMethodError: undefined method `to_a' for 3:Fixnum
+	from (irb):13
+	from /usr/bin/irb:12:in `<main>'
+     El error surge porque se intenta acceder al método "to_a()" del objeto "3",
+     se soluciona parentizando:
+     (1..3).to_a
 
+45
+   - true
+   - true
+   - true
+     Todas dan como resultado "verdadero" porque esos números están todos dentro
+     del rango. Los métodos 'member?()' e 'include?()' son equivalentes.
+
+46
+   - TrueClass.
+   - FalseClass.
+   - hello
+     => nil
+   - => nil
+   - (irb):25: warning: string literal in condition
+     hello
+     => nil
+     Aquí vemos que Ruby no evalúa como 'false' el número cero ni la cadena
+     vacía, pero sí lo hace con el valor 'nil'.
+
+47
+   - Symbol.
+   - false. Esto es porque su valor no es una cadena, sino un símbolo.
+   - true.
+   - Symbol.
+   - true. El método 'to_sym()' de la clase String lo convierte en Symbol y por
+     eso se evalúa como verdadera la expresión.
+   - true. El método 'to_s()' de la clase Symbol hace lo contrario, por lo que
+     también se evalúa a verdadero.
+
+48
+   - Rub. Al hacer la igualación no se hace una copia del contenido, sino que
+     se crea un alias de la variable s.
+   - RubJava. Cuando se iguala la variable a "Java", se crea un objeto de tipo
+     String y se referencia por la variable t, sin modificar el contenido del
+     objeto al que apuntaba previamente.
+
+49 - "3 rubies".
+
+50
+   - [4, 5]. Los valores se asignan respectivamente a las variables 'x' e 'y'.
+   - 5. Esa expresión asigna a la variable z el valor mayor de 'x' e 'y'.
+   - [1, 2, 3]. Ahora x=1, y=2 y z=3.
 
