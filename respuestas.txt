@@ -18,9 +18,9 @@
 25 - "--\#{a}--\n--\#{b}--\n".
 
 26
-   - "he".
-   - "o".
-   - "hello".
+   - La subcadena que empieza por la posición 0 y de tamaño 2: "he".
+   - La última letra de la cadena: "o".
+   - La subcadena que empieza por 0 y tiene tamaño máximo 10: "hello".
 
 27 - "hello world".
 
@@ -39,4 +39,51 @@
      se interpretan como tabulación y retorno de carro, no como '\t' y '\n'.
      ["\t", "\n"]
 
+33 - Contiene un array de 3 números nulos: 'nil'.
+
+34 - Contiene un array de 3 enteros inicializados a 0.
+
+35 - Una matriz con la siguiente forma:
+     1	2
+     3	4
+
+36 - Queda un array donde en cada posición i, el contenido es un entero con
+     valor 2*i.
+     [0, 2, 4]
+
+37
+   - El elemento de la posición 1: ["b"].
+   - El segundo elemento empezando por el final y el siguiente: ["d", "e"].
+   - Los elementos del rango [0, 2]: ["a", "b", "c"].
+   - Los elementos del rango [0, 1): ["a"].
+   - Los elementos del rango [1, 0] empezando por el final: ["d", "e"].
+
+38
+   - El array de letras tras sustituir las 2 primeras posiciones por 'A' y
+     'B': ["A", "B", "c", "d", "e"].
+   - El array tras sustituir el rango [2, 4] por 'C', 'D' y 'E':
+     ["A", "B", "C", "D", "E"].
+   - Se inserta [1, 2, 3] en el array: [1, 2, 3, "A", "B", "C", "D", "E"].
+   - Se borran las primeras 2 posiciones del array:
+     [3, "A", "B", "C", "D", "E"].
+   - Sustituye la última posición por 'Z': [3, "A", "B", "C", "D", "Z"].
+   - Se sustituyen las 2 últimas posiciones por un solo 'nil':
+     [3, "A", "B", "C", nil].
+
+39
+   - Se crea el array de enteros: [1, 2, 3, 4].
+   - Se insertan los números 4 y 5 al final del array: [1, 2, 3, 4, 4, 5].
+   - Se añade un array como último elemento de este array:
+     [1, 2, 3, 4, 4, 5, [6, 7, 8]].
+   - TypeError: no implicit conversion of Fixnum into Array
+	from (irb):69:in `+'
+	from (irb):69
+	from /usr/local/rvm/rubies/ruby-2.0.0-p247/bin/irb:13:in `<main>'
+     El error indica que no se ha definido una suma entre array y número
+     entero.
+
+40
+   - ["a", "b", "c", "b", "a"]
+   - Se borran todas las 'b', 'c' y 'd' del array, aunque estén repetidas:
+     ["a", "a"].
 
